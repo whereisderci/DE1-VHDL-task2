@@ -1,0 +1,43 @@
+Project structure
+
+
+Hardware configuration
+
+Software configuration:
+
+  Basic components: 
+
+        1. bin2seg
+        2. clock_enable
+        3. debounce
+
+  Components:
+  
+        1. adjusting bin2seg for two segments
+        2. adjusting debounce for one button for START/STOP
+        3. adjusting clock_enable for specific time
+        4. creating timer 0 - 60 seconds, than starts over
+        5. creating signals with different frequency, 4 signals with frequency of tones A,E,C,D
+
+  TestBench:
+        Simulations for different components
+        testing displaying numbers
+        correct the fequency of different signals
+        set wanted time of signals
+
+  Board implementation:
+
+  Creating final top_level
+    1. setting inputs and outputs
+    2. setting signals between components
+
+    Idea:
+
+BTNC button will start the timer, with turning on a switch one of relays starts clicking in specific frequency
+By turning on other switch will start other relay click in another frequency
+BTNC can also stop the timer and the switches won`t be active
+BTND will restart the timer if wanted, after 60 seconds the timer starts over again.
+LEDS indicates if signal is active or not
+
+
+
