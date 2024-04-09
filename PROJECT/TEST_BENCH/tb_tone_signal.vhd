@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
---je tøeba ještì upravit finální hodnoty
+--je tÃ¸eba jeÅ¡tÃ¬ upravit finÃ¡lnÃ­ hodnoty
 
 entity tb_signals is
 end tb_signals;
