@@ -45,13 +45,15 @@ architecture behavioral of debounce is
     signal state : state_type;
 
     -- Define number of periods for debounce counter
-    constant DEB_COUNT : integer := 100;
+    constant DEB_COUNT : integer := 5;
 
     -- Define signals for debounce counter
     signal sig_count : integer range 0 to DEB_COUNT;
 
     -- Debounced signal
     signal sig_clean : std_logic;
+    
+    signal sig_just_pressed : std_logic;
     
 begin
 
@@ -64,6 +66,9 @@ begin
     begin
 
         if rising_edge(clk) then
+            if (bouncey = '0') then
+                sig_just_pressed <= '0';
+            end if;
             -- Active-high reset
             if (rst = '1') then
                 state <= OFF;
@@ -75,19 +80,22 @@ begin
                     when OFF =>
                         -- If bouncey button = 1 then clear counter and change to PRE_PRESSED;
                         if bouncey = '1' then
-                            sig_count <= 0;
-                            state <= PRE_ON;
+                            if (sig_just_pressed = '0') then
+                                sig_count <= 0;
+                                state <= PRE_ON;
+                            end if;
                         end if;
 
                     when PRE_ON =>
                         -- If button = 1 increment counter
                         if bouncey = '1' then
-                            sig_count <= sig_count + 1;
+                                sig_count <= sig_count + 1;
 
-                            -- if counter = DEB_COUNT-1 change to PRESSED
-                            if sig_count = DEB_COUNT - 1 then
-                                state <= ONN;
-                            end if;
+                                -- if counter = DEB_COUNT-1 change to PRESSED
+                                if sig_count = DEB_COUNT - 1 then
+                                    state <= ONN;
+                                    sig_just_pressed <= '1';
+                                end if;
 
                         -- else change to RELEASED
                         else
@@ -97,19 +105,22 @@ begin
                     when ONN =>
                         -- If button = 0 then clear counter and change to PRE_RELEASED;
                         if bouncey = '1' then
-                            sig_count <= 0;
-                            state <= PRE_OFF;
+                            if (sig_just_pressed = '0') then
+                                sig_count <= 0;
+                                state <= PRE_OFF;
+                            end if;
                         end if;
 
                     when PRE_OFF =>
                         -- If button = 0 then increment counter
                         if bouncey = '1' then
-                            sig_count <= sig_count + 1;
+                                sig_count <= sig_count + 1;
 
-                            -- if counter = DEB_COUNT-1 change to RELEASED;
-                            if sig_count = DEB_COUNT - 1 then
-                                state <= OFF;
-                            end if;
+                                -- if counter = DEB_COUNT-1 change to RELEASED;
+                                if sig_count = DEB_COUNT - 1 then
+                                    state <= OFF;
+                                    sig_just_pressed <= '1';
+                                end if;
 
                         -- else change to PRESSED;
                         else

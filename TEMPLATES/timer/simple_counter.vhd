@@ -34,7 +34,7 @@ use IEEE.std_logic_unsigned.all;
 
 entity simple_counter is
     generic (
-            FrequencyHz : integer := 100;
+            FrequencyHz : integer := 100
             );
     Port ( clk : in STD_LOGIC;
            rst : in STD_LOGIC;
@@ -46,23 +46,46 @@ end simple_counter;
 architecture Behavioral of simple_counter is
 
 signal tick: integer range 0 to FrequencyHz - 1 := 0;
-signal seconds: STD_LOGIC_VECTOR (3 downto 0);
-signal sig_dec: STD_LOGIC_VECTOR (3 downto 0);
+signal seconds: STD_LOGIC_VECTOR (3 downto 0) := "0000";
+signal sig_dec: STD_LOGIC_VECTOR (3 downto 0) := "0000";
+--signal sig_delayed: std_logic;
+--signal pos_edge: std_logic;
 
 begin
+
+
+--    delay : process (clk) is
+--    begin
+--        if rising_edge(clk) then
+--            sig_delayed <= en;
+--        end if;
+--    end process delay;
+    
+--    pos_edge <= en and not sig_delayed;
 
 
 process (clk)
 begin
    if rising_edge(clk) then
+--      if pos_edge='1' then
+--         tick <= 0;
+--         seconds <= (others => '0');
+--         sig_dec <= (others => '0');
+--      end if;
       if rst='1' then
          tick <= 0;
          seconds <= (others => '0');
+         sig_dec <= (others => '0');
       elsif en='1' then
          if tick = FrequencyHz - 1 then
                 tick <= 0;
-                if seconds = 60 then  -- ADDED MODULUS 4 test for counter
+                if seconds = 9 then  -- ADDED MODULUS 4 test for counter
                     seconds <= (others => '0');
+                    if sig_dec = 5 then
+                        sig_dec <= (others => '0');
+                    else
+                        sig_dec <= sig_dec + 1;
+                    end if;
                 else
                     seconds <= seconds + 1;
                 end if;
@@ -72,32 +95,6 @@ begin
       end if;
    end if;
 end process;
-
-devider: process (seconds) is
-begin
-    sig_dec <= (others => '0');
-    if seconds > 9 then
-        sig_dec <= sig_dec + 1;
-        seconds <= seconds - 10;
-    end if;
-    if seconds > 19 then
-        sig_dec <= sig_dec + 1;
-        seconds <= seconds - 10;
-    end if;
-    if seconds > 29 then
-        sig_dec <= sig_dec + 1;
-        seconds <= seconds - 10;
-    end if;
-    if seconds > 39 then
-        sig_dec <= sig_dec + 1;
-        seconds <= seconds - 10;
-    end if;
-    if seconds > 49 then
-        sig_dec <= sig_dec + 1;
-        seconds <= seconds - 10;
-    end if;
-    
-end process devider;
 
 count <= seconds;
 

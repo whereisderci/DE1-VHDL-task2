@@ -89,6 +89,9 @@ component bin2seg is
 end component;
 
 component seg_display is
+    generic (
+            FrequencyHz : integer := 1000000
+            );
     Port ( clk : in STD_LOGIC;
            en : in STD_LOGIC;
            seg1 : in STD_LOGIC_VECTOR (6 downto 0);
@@ -149,6 +152,9 @@ b2s : bin2seg
            );
            
 disp : seg_display 
+    generic map (
+            FrequencyHz => 1000000
+            )
     port map ( 
             clk => CLK100MHZ,
             en => sig_en_2ms,
