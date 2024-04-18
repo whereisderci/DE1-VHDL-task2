@@ -29,3 +29,6 @@ Tady pro spoustu component zatím chybý test banche
 
 s tím že ten fsm diagram nění přesně podle kódu ke konci jsem ho pak byl líný upravovat... 
 
+![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/1e023bef-df65-49d4-a017-cac0af75854e)
+
+a tohle je ta písnička s tím že jednotlivý čísla znamenají v závěru kolik se provede úderů a nějaký stanovený časový úsek Tempem (viz. global schéma). 
