@@ -25,16 +25,16 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity LED_controller is
    Port (  
-           clk : in STD_LOGIC;               -- Hodinov˝ sign·l
-           rst : in STD_LOGIC;             -- Sign·l pro resetov·nÌ ?Ìta??
+           clk : in STD_LOGIC;               -- Hodinov√Ω sign√°l
+           rst : in STD_LOGIC;             -- Sign√°l pro resetov√°n√≠ ?√≠ta??
            LED_out : out STD_LOGIC
          );       
 end LED_controller;
 
 architecture Behavioral of LED_controller is
-    constant CLK_FREQ : natural := 100_000_000;  -- Frekvence hodinovÈho sign·lu (nap?. 100 MHz)
-    constant BLINK_FREQ : natural := 2;           -- Frekvence blik·nÌ LED diody (nap?. 2 Hz)
-    constant TOGGLE_COUNT : natural := CLK_FREQ / (2 * BLINK_FREQ);  -- Po?et tik? ?Ìta?e pro jedno bliknutÌ LED diody
+    constant CLK_FREQ : natural := 100_000_000;  -- Frekvence hodinov√©ho sign√°lu (nap?. 100 MHz)
+    constant BLINK_FREQ : natural := 2;           -- Frekvence blik√°n√≠ LED diody (nap?. 2 Hz)
+    constant TOGGLE_COUNT : natural := CLK_FREQ / (2 * BLINK_FREQ);  -- Po?et tik? ?√≠ta?e pro jedno bliknut√≠ LED diody
     signal signal_LED_out : STD_LOGIC := '0';
     signal counter : integer range 0 to TOGGLE_COUNT;  
 
@@ -43,10 +43,10 @@ begin
     begin
         if rising_edge(clk) then
             if rst = '1' then
-               counter <= 0;  -- Resetovat ?Ìta?      
+               counter <= 0;  -- Resetovat ?√≠ta?      
                signal_LED_out <= '0';
             end if;
-            if counter >= TOGGLE_COUNT then   -- Pokud ?Ìta? dos·hne poûadovanÈho po?tu tik?
+            if counter >= TOGGLE_COUNT then   -- Pokud ?√≠ta? dos√°hne po≈æadovan√©ho po?tu tik?
                counter <= 0;
                signal_LED_out <= not signal_LED_out;
             else
