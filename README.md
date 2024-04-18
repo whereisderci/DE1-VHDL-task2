@@ -23,3 +23,6 @@ Second button will reset whole process.
 
 ![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/757d180d-983b-4ae8-bd75-5e5e95284f86)
 
+![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/86e970c3-bc22-4e0b-a2ac-fdad84a23dd7)
+
+
