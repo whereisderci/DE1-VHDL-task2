@@ -1,8 +1,6 @@
-# DE1-VHDL-task2
+# Relay-Controlled Sound Synthesizer
 
-TOPIC NUM. 2 - Relays sound sythesizer
-
-TEAM:
+Team members:
 
 1. Adam Petrů
 2. Jakub Kupčík
