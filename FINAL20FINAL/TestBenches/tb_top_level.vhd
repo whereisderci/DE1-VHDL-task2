@@ -113,14 +113,15 @@ begin
         -- Reset generation
         --  EDIT: Replace BTND below by the name of your reset as I haven't guessed it
         BTND <= '1';
-        wait for 100 ns;
+        wait for 500 ns;
         BTND <= '0';
         BTNC <= '1';
         wait for 10 * TbPeriod;
         
         BTNC <= '1';
         BTND <= '0';
-        BTNC <= '1';
+        wait for 100 * TbPeriod;
+        BTNC <= '0';
         -- EDIT Add stimuli here
         wait for 100 * TbPeriod;
 
