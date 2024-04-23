@@ -27,9 +27,10 @@ Software description:
 
 Instructions:  
 Manual:  
+
 Short app video:  
 
-References:
+References:  
 
 
 ![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/757d180d-983b-4ae8-bd75-5e5e95284f86)
