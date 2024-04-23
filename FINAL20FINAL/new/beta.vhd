@@ -183,7 +183,7 @@ begin
                 );
                 
      c_en_1 : component clk_enable
-        generic map(N_PERIODS => 4)
+        generic map(N_PERIODS => 11000000)
         port map(
                  clk => CLK100MHZ,
                  rst => '0',
