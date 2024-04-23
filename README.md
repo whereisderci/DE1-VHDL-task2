@@ -7,15 +7,15 @@ Team members:
 3. Hana Larvová
 4. David Muzikář
 
-Design codes
-Test benches
-Hardware configuration
-Code debugging
-Implementation on board
-Presentation
+Design codes  
+Test benches  
+Hardware configuration  
+Code debugging  
+Implementation on board  
+Presentation  
 
 Theoretical description and explanation:  
-Signal files, connect each signal to clock enable, those signals will create a song played on first relay
+Signal files, connect each signal to clock enable, those signals will create a song played on first relay.
 Second and third relays are drums that will be speed up or slowed down by defined frequency. Those relays will simultaneously play with first one.
 With these relays will be counting time on seven segment display. Start button will start timer, signals if switches are on and LEDS. The same button is also a stop button.
 Second button will reset whole process.
@@ -25,8 +25,9 @@ The main part is Nexys A7 programmable FPGA board, which generates signals to th
 
 Software description:
 
-Instructions:
-
+Instructions:  
+Manual:  
+Short app video:  
 
 References:
 
