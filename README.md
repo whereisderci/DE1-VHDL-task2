@@ -27,7 +27,7 @@ First you have to turn on the Nexys A7 FPGA board. Then when you press the BTNC 
 ### Short app video:
 
 ## References:
-
+https://vhdl.lapinoo.net/testbench/  
 
 
 ![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/757d180d-983b-4ae8-bd75-5e5e95284f86)
