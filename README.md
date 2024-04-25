@@ -26,9 +26,6 @@ Schematic of top_level:
 First you have to turn on the Nexys A7 FPGA board. Then when you press the BTNC button timer starts to count and song starts to play. If you turn on one of the two switches, drums adds to song. At the same time LED above the switch lights up. When you want to pause the song, press again BTNC button. Timer stops too. Then when you want to reset the timer and stop songs, press BTND button.
 ### Short app video:
 
-## References:
-https://vhdl.lapinoo.net/testbench/  
-
 ### Description of working process
 For a long time, our main problem was implementing a basic signal on the Nexys board, which would cause some sort of clicking in the connected relay. The simulation for the signal worked, but the implementation had its bugs to fix. Right after accomplishing this task, the same problem appeared with the melody, where the simulation worked, but the implementation did not.
 
@@ -47,4 +44,7 @@ State diagram:
 ![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/1e023bef-df65-49d4-a017-cac0af75854e)
 
 The whole melody, where numbers represent the quantity of hits by each relay. Different tones are played on different relays. Three relays are used for the melody of the Star Wars Imperial theme song, while the other two relays are for optional drums and tones. In the project, only two are implemented due to the deadline.
+
+## References:
+https://vhdl.lapinoo.net/testbench/  
 
