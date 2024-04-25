@@ -29,7 +29,7 @@ First you have to turn on the Nexys A7 FPGA board. Then when you press the BTNC 
 ## References:
 https://vhdl.lapinoo.net/testbench/  
 
-# Description of working process
+### Description of working process
 For a long time, our main problem was implementing a basic signal on the Nexys board, which would cause some sort of clicking in the connected relay. The simulation for the signal worked, but the implementation had its bugs to fix. Right after accomplishing this task, the same problem appeared with the melody, where the simulation worked, but the implementation did not.
 
 After many attempts and numerous test projects, we came to the final stage of connecting everything together through the final top-level module. The top-level module had many bugs and had to be fixed right before implementing everything on the board. Our vision for the LEDs was to make them flicker when the switch for the signal was turned on. This application had problems that we couldn't resolve. That's why we had to abandon the project.
