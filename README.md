@@ -37,13 +37,12 @@ One of solutions recreating song for relay:
 
 First schematic, melody is played via demux and 3 different frequency modulations. 
 
-![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/86e970c3-bc22-4e0b-a2ac-fdad84a23dd7)
-![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/a020ef9c-a488-4741-9e17-b12cc00b090c)
-
+![state diagram](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/55fd353b-9efe-4e25-a79c-a00710ba6ca8)
 
 State diagram: 
 
-![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/1e023bef-df65-49d4-a017-cac0af75854e)
+![data_digit](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/c098e97b-8b76-4040-8662-25e16618771a)
+
 
 The whole melody, where numbers represent the quantity of hits by each relay. Different tones are played on different relays. Three relays are used for the melody of the Star Wars Imperial theme song, while the other two relays are for optional drums and tones. In the project, only two are implemented due to the deadline.
 
