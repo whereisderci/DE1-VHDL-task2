@@ -38,6 +38,8 @@ One of solutions recreating song for relay:
 First schematic, melody is played via demux and 3 different frequency modulations. 
 
 ![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/86e970c3-bc22-4e0b-a2ac-fdad84a23dd7)
+![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/a020ef9c-a488-4741-9e17-b12cc00b090c)
+
 
 State diagram: 
 
