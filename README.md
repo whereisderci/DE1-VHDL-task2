@@ -10,7 +10,7 @@ Team members:
 ## Theoretical description and explanation:
 The aim of this project is to develop and implement a sound synthesizer utilizing relays on the Nexys A7 FPGA board. Users can compose and play basic melodies by turning the relays on trough switches. Push buttons serve as controls for start and stop, while LEDs and seven-segment display provide some visualization.  
 ### Solution:
-Signal files connect each signal to clock enable and create a song played on the first and second relay. This song starts to play when the BTNC button is pressed. At the same time, a timer starts to count. The timer is visualized on the seven-segment display, counting to 60. When it reaches 60 seconds, it resets to zero and starts counting again. The same button also serves as a stop button and the BTND button resets the whole process.
+Signal files connect each signal to clock enable and create a song played on the first and second relay. This song starts to play when the BTNC button is pressed. At the same time, a timer starts to count. The timer is visualized on the seven-segment display, counting to 60. When it reaches 60 seconds, it resets to zero and starts counting again. The same button also serves as a stop button and the BTND button resets the whole process. When the song plays, the RGB LED lights up.
 
 ## Hardware description of demo application:
 The main part is Nexys A7 programmable FPGA board, which generates signals to three relays connected through Pmod connectors. Each relay is responsible for different sound. Relays need to be charged by 5V and Nexys A7 is capable only 3.3V. This is the reason why the Arduino Uno is needed. It serves as 5V source to relays. Then there is used breadboard with convertor 3.3V and 5V.   
