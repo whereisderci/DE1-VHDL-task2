@@ -2,10 +2,10 @@
 
 Team members:
 
-1. Adam Petrů
-2. Jakub Kupčík
-3. Hana Larvová
-4. David Muzikář
+1. Adam Petrů (made signal, that indicates Star Wars theme, testbench for the theme song signal)
+2. Jakub Kupčík (made timer, button stop/play and reset, testbench for timer and buttons)
+3. Hana Larvová (testbenches for top_level, signals and switches, hardware, documentation)
+4. David Muzikář (created top_level, test signals, hardware, documentation)
 
 ## Theoretical description and explanation:
 The aim of this project is to develop and implement a sound synthesizer utilizing relays on the Nexys A7 FPGA board. Users can compose and play basic melodies by turning the relays on trough switches. Push buttons serve as controls for start and stop, while LEDs and seven-segment display provide some visualization.  
