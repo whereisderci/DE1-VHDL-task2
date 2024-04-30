@@ -17,9 +17,26 @@ The main part is Nexys A7 programmable FPGA board, which generates signals to th
   
 ## Software description:
 Schematic of top_level:    
-![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/114295996/e4fd61c0-c4f9-4882-b5e0-4758214a87c9)
-### Components simulation
 <img width="834" alt="image" src="https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/0e1f7d3f-e036-482a-a4ab-9a32418d6beb">
+
+Schematic of simpe_counter:
+
+<img width="834" alt="image" src="https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/87c899e9-cd5d-4154-9590-280bd87a5ad6">
+
+Schematic of clock enable:
+
+<img width="815" alt="image" src="https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/a7c18117-ec28-4f6c-bff4-84d4fdd7295b">
+
+Schematic of song:
+
+<img width="612" alt="image" src="https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/3e58ce18-2669-42bf-bda4-c90abd8f5092">
+
+Schematic of debouncer:
+
+<img width="1134" alt="image" src="https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/d13e0509-4b09-4c1e-a058-dee26ec768e7">
+
+
+### Components simulation
 
 ## Instructions:
 ### Manual:
