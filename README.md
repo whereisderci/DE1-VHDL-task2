@@ -19,6 +19,7 @@ The main part is Nexys A7 programmable FPGA board, which generates signals to th
 Schematic of top_level:    
 ![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/114295996/e4fd61c0-c4f9-4882-b5e0-4758214a87c9)
 ### Components simulation
+<img width="834" alt="image" src="https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/0e1f7d3f-e036-482a-a4ab-9a32418d6beb">
 
 ## Instructions:
 ### Manual:
