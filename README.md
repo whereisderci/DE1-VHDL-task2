@@ -46,7 +46,7 @@ Connection to the amplifier
   
   
   
-## Software description:
+## Software solution:
 
 ### Schematic of top_level:    
 
