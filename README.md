@@ -25,27 +25,27 @@ The main part is Nexys A7 programmable FPGA board, which generates signals to th
   
 ## Software description:
 
-###Schematic of top_level:    
+### Schematic of top_level:    
 
 <img width="600" alt="image" src="https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/0e1f7d3f-e036-482a-a4ab-9a32418d6beb">
 
-###Schematic of simpe_counter:
+### Schematic of simpe_counter:
 
   <img width="600" alt="image" src="https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/87c899e9-cd5d-4154-9590-280bd87a5ad6">
 
-###Schematic of clock enable:
+### Schematic of clock enable:
 
   <img width="600" alt="image" src="https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/a7c18117-ec28-4f6c-bff4-84d4fdd7295b">
 
-###Schematic of song:
+### Schematic of song:
 
   <img width="600" alt="image" src="https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/3e58ce18-2669-42bf-bda4-c90abd8f5092">
 
-###Schematic of debouncer:
+### Schematic of debouncer:
 
   <img width="1134" alt="image" src="https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/d13e0509-4b09-4c1e-a058-dee26ec768e7">
 
-###Schematic of relay:
+### Schematic of relay:
   
   ![2-channel-relay_description](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/361b0561-7759-4938-a1f0-3b7e2c8620a1)
 
@@ -63,9 +63,9 @@ For a long time, our main problem was implementing a basic signal on the Nexys b
 
 After many attempts and numerous test projects, we came to the final stage of connecting everything together through the final top-level module. The top-level module had many bugs and had to be fixed right before implementing everything on the board. Our vision for the LEDs was to make them flicker when the switch for the signal was turned on. This application had problems that we couldn't resolve. That's why we had to abandon the project.
 
-###Parts of code used in project:
+### Parts of code used in project:
 
-  Clock enable : [PROJEKT_FINAL/clk_en.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/clk_en.vhd)
+ #### Clock enable : [PROJEKT_FINAL/clk_en.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/clk_en.vhd)
       
       entity clk_enable is
         generic (
@@ -89,7 +89,7 @@ After many attempts and numerous test projects, we came to the final stage of co
     
     end process p_clk_enable;
 
-  Bin2seg: [PROJEKT_FINAL/bin2seg.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/bin2seg.vhd)
+ #### Bin2seg: [PROJEKT_FINAL/bin2seg.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/bin2seg.vhd)
   
       p_7seg_decoder : process (bin, clear) is
     begin
@@ -113,7 +113,7 @@ After many attempts and numerous test projects, we came to the final stage of co
         seg2 <= "1001111";
 ...
 
-  Simple counter: [PROJEKT_FINAL/simple_counter.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/simple_counter.vhd)
+  #### Simple counter: [PROJEKT_FINAL/simple_counter.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/simple_counter.vhd)
           
           generic (
             FrequencyHz : integer := 100
@@ -146,7 +146,7 @@ After many attempts and numerous test projects, we came to the final stage of co
                 tick <= tick + 1;
             end if;
 
-My FSM: [PROJEKT_FINAL/my_fsm.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/my_fsm.vhd)
+#### My FSM: [PROJEKT_FINAL/my_fsm.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/my_fsm.vhd)
 ... 
 
       case b is
@@ -162,7 +162,7 @@ My FSM: [PROJEKT_FINAL/my_fsm.vhd](https://github.com/whereisderci/DE1-VHDL-task
 
 
 
-Demux: [PROJEKT_FINAL/demux.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/demux.vhd)
+#### Demux: [PROJEKT_FINAL/demux.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/demux.vhd)
 ...
       
         begin
@@ -181,7 +181,7 @@ Demux: [PROJEKT_FINAL/demux.vhd](https://github.com/whereisderci/DE1-VHDL-task2/
                 y3 <= d;
             end if;
 
-Top level: [PROJEKT_FINAL/top_level.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/top_level.vhd)
+#### Top level: [PROJEKT_FINAL/top_level.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/top_level.vhd)
 
 declaration of inputs and otputs.
 
@@ -209,34 +209,35 @@ declaration of inputs and otputs.
                 dec => sig_dec
                );
 
-Links for other codes:
-  Beta (underneath top_level, connects song components together): [PROJEKT_FINAL/beta.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/beta.vhd)
+### Links for other codes:
+  #### Beta (underneath top_level, connects song components together): [PROJEKT_FINAL/beta.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/beta.vhd)
   
-  Debounce: [PROJEKT_FINAL/debounce.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/debounce.vhd)
+  #### Debounce: [PROJEKT_FINAL/debounce.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/debounce.vhd)
   
-  Cleaner: [PROJEKT_FINAL/cleaner2.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/cleaner2.vhd)
+  #### Cleaner: [PROJEKT_FINAL/cleaner2.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/cleaner2.vhd)
   
-  Signal A1: [PROJEKT_FINAL/signal_A1.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/signal_A1.vhd)
+  #### Signal A1: [PROJEKT_FINAL/signal_A1.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/signal_A1.vhd)
     
-  Signal B1: [PROJEKT_FINAL/signal_B1.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/signal_B1.vhd)
+  #### Signal B1: [PROJEKT_FINAL/signal_B1.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/signal_B1.vhd)
   
-  Counter22: [PROJEKT_FINAL/counter22.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/counter22.vhd)
+  #### Counter22: [PROJEKT_FINAL/counter22.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/counter22.vhd)
     
-One of solutions recreating song for relay:
+### One of solutions recreating song for relay:
 
 ![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/757d180d-983b-4ae8-bd75-5e5e95284f86)
 
-First schematic, melody is played via demux and 3 different frequency modulations. 
+#### First schematic, melody is played via demux and 3 different frequency modulations. 
 
 ![state diagram](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/55fd353b-9efe-4e25-a79c-a00710ba6ca8)
 
-State diagram: 
+#### State diagram: 
 
 ![data_digit](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/c098e97b-8b76-4040-8662-25e16618771a)
 
 
-Umage represents the whole melody, where numbers represent the quantity of hits by each relay. Different tones are played on different relays. Three relays are used for the melody of the Star Wars Imperial theme song, while the other two relays are for optional drums and tones. In the project, only two are implemented due to the deadline.
+Image represents the whole melody, where numbers represent the quantity of hits by each relay. Different tones are played on different relays. Three relays are used for the melody of the Star Wars Imperial theme song, while the other two relays are for optional drums and tones. In the project, only two are implemented due to the deadline.
 
 ## References:
 https://vhdl.lapinoo.net/testbench/  
+https://github.com/tomas-fryza/vhdl-course/tree/33a0aaf4fb018f0b1f5b19dacd7ed9942d025153/lab8-project/images
 
