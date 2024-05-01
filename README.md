@@ -29,7 +29,7 @@ Connection of pins on board
 Connection to relays
 ![IMG_1682](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/188c9eea-721d-4e24-abc6-a3f09074ee1e)
 
-
+Connection of 5V from Arduino to amplifier
 ![IMG_1681](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/f7ad601b-0744-40bd-b0dd-f40e041ea32c)
 
 Connection to the amplifier
@@ -93,8 +93,7 @@ For a long time, our main problem was implementing a basic signal on the Nexys b
 
 After many attempts and numerous test projects, we came to the final stage of connecting everything together through the final top-level module. The top-level module had many bugs and had to be fixed right before implementing everything on the board. Our vision for the LEDs was to make them flicker when the switch for the signal was turned on. This application had problems that we couldn't resolve. That's why we had to abandon the thought.
 
-You can notice that our folder has many others codes. These were firstly meant to be added to song and make background clicking (something like drums making background noise). With that a code for LED controlling had to make LEDs pulse in specific frequency, when switch for specific tone is turned on. 
-
+You can notice that our folder contains many other codes. These were initially meant to be added to the song to create background clicking (similar to drums making background noise). Along with that, a code for LED control had to make the LEDs pulse at a specific frequency when the switch for a specific tone was turned on.
 ### Parts of code used in project:
 
  #### Clock enable : 
