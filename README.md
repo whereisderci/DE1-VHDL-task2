@@ -25,10 +25,12 @@ The main part is Nexys A7 programmable FPGA board, which generates signals to th
 
 
   Nexys A7 50T:
-    ![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/27fc30ae-9109-4832-a9a4-a75c11b14744)
+  
+  ![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/27fc30ae-9109-4832-a9a4-a75c11b14744)
   
   Relay:
-    ![2-channel-relay_description](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/12fa3287-5be4-45a0-ad9f-725d65269041)
+  
+  ![2-channel-relay_description](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/12fa3287-5be4-45a0-ad9f-725d65269041)
   
   
   
