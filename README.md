@@ -14,6 +14,9 @@ Signal files connect each signal to clock enable and create a song played on the
 
 ## Hardware description of demo application:
 The main part is Nexys A7 programmable FPGA board, which generates signals to three relays connected through Pmod connectors. Each relay is responsible for different sound. Relays need to be charged by 5V and Nexys A7 is capable only 3.3V. This is the reason why the Arduino Uno is needed. It serves as 5V source to relays. Then there is used breadboard with convertor 3.3V and 5V.   
+
+  Nexys A7 50T:
+  lab8-project/images/nexys-a7.png
   
 ## Software description:
 Schematic of top_level:    
