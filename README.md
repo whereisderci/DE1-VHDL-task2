@@ -20,17 +20,19 @@ The main part is Nexys A7 programmable FPGA board, which generates signals to th
 
 Connection between FPGA board, signal (voltage) amplifier and relays
 
-Connection to the amplifier and relays
+Entire circuit
 ![IMG_1684](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/ee179646-03f1-43c5-9d8a-596ebedb40c9)
 
+Connection of pins on board
 ![IMG_1683](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/05c7c25a-8e40-4199-9d2d-ab6d650c038d)
 
+Connection to relays
 ![IMG_1682](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/188c9eea-721d-4e24-abc6-a3f09074ee1e)
 
-Entire circuit
+
 ![IMG_1681](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/f7ad601b-0744-40bd-b0dd-f40e041ea32c)
 
-Connection of pins on board
+Connection to the amplifier
 ![IMG_1680](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/4c163163-9772-41e5-895b-ccdd7d3d0fdd)
 
 
