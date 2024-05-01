@@ -86,6 +86,7 @@ https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/bf1c21e9-2a33-4d
 The key element was making a song that would click at a specific moment in a specific order. Different clicks (tones) were distributed across various relays to create an easier and better solution for us. There were many attempts to create one signal, which would have all the tones in it, but that took a lot of precious time, so this was the only solution.
 
 ![simulation_beta](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/495af2de-ab8c-4432-87c5-736caa9f7846)
+<img width="848" alt="image" src="https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/e9dac29f-24f6-4b56-abc4-8fb5bc1d2e65">
 
 
 ### Description of working process
