@@ -17,10 +17,20 @@ The main part is Nexys A7 programmable FPGA board, which generates signals to th
 
 ### Hardware solution:
 
+
+Connection between FPGA board, signal (voltage) amplifier and relays
+
+Connection to the amplifier and relays
 ![IMG_1684](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/ee179646-03f1-43c5-9d8a-596ebedb40c9)
+
 ![IMG_1683](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/05c7c25a-8e40-4199-9d2d-ab6d650c038d)
+
 ![IMG_1682](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/188c9eea-721d-4e24-abc6-a3f09074ee1e)
+
+Entire circuit
 ![IMG_1681](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/f7ad601b-0744-40bd-b0dd-f40e041ea32c)
+
+Connection of pins on board
 ![IMG_1680](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/4c163163-9772-41e5-895b-ccdd7d3d0fdd)
 
 
@@ -28,7 +38,7 @@ The main part is Nexys A7 programmable FPGA board, which generates signals to th
   
   ![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/27fc30ae-9109-4832-a9a4-a75c11b14744)
   
-  Relay:
+  Relays:
   
   ![2-channel-relay_description](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/12fa3287-5be4-45a0-ad9f-725d65269041)
   
@@ -79,7 +89,9 @@ The key element was making a song that would click at a specific moment in a spe
 ### Description of working process
 For a long time, our main problem was implementing a basic signal on the Nexys board, which would cause some sort of clicking in the connected relay. The simulation for the signal worked, but the implementation had its bugs to fix. Right after accomplishing this task, the same problem appeared with the melody, where the simulation worked, but the implementation did not.
 
-After many attempts and numerous test projects, we came to the final stage of connecting everything together through the final top-level module. The top-level module had many bugs and had to be fixed right before implementing everything on the board. Our vision for the LEDs was to make them flicker when the switch for the signal was turned on. This application had problems that we couldn't resolve. That's why we had to abandon the project.
+After many attempts and numerous test projects, we came to the final stage of connecting everything together through the final top-level module. The top-level module had many bugs and had to be fixed right before implementing everything on the board. Our vision for the LEDs was to make them flicker when the switch for the signal was turned on. This application had problems that we couldn't resolve. That's why we had to abandon the thought.
+
+You can notice that our folder has many others codes. These were firstly meant to be added to song and make background clicking (something like drums making background noise). With that a code for LED controlling had to make LEDs pulse in specific frequency, when switch for specific tone is turned on. 
 
 ### Parts of code used in project:
 
@@ -243,6 +255,18 @@ After many attempts and numerous test projects, we came to the final stage of co
   ##### Signal B1: [PROJEKT_FINAL/signal_B1.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/signal_B1.vhd)
   
   ##### Counter22: [PROJEKT_FINAL/counter22.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/counter22.vhd)
+
+
+  ## Testbenches:
+  
+  ### Top level:
+  https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/TestBenches/tb_top_level.vhd
+  ### simple counter:
+  https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/TestBenches/tb_count.vhd
+  ### bin2seg:
+  https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/TestBenches/tb_b2s.vhd
+  ### Signals (My FSM):
+  https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/TestBenches/tb_tone_signal.vhd
     
 ### One of solutions recreating song for relay:
 
