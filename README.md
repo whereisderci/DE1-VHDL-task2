@@ -60,8 +60,6 @@ The main part is Nexys A7 programmable FPGA board, which generates signals to th
   
   ![2-channel-relay_schematic](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/cf3f89a9-5809-40a4-8512-3aad8a123a69)
 
-## H
-
 
 ### Components simulation
 
