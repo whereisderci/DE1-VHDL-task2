@@ -15,6 +15,15 @@ Signal files connect each signal to clock enable and create a song played on the
 ## Hardware description of demo application:
 The main part is Nexys A7 programmable FPGA board, which generates signals to three relays connected through Pmod connectors. Each relay is responsible for different sound. Relays need to be charged by 5V and Nexys A7 is capable only 3.3V. This is the reason why the Arduino Uno is needed. It serves as 5V source to relays. Then there is used breadboard with convertor 3.3V and 5V.   
 
+### Hardware solution:
+
+![IMG_1684](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/ee179646-03f1-43c5-9d8a-596ebedb40c9)
+![IMG_1683](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/05c7c25a-8e40-4199-9d2d-ab6d650c038d)
+![IMG_1682](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/188c9eea-721d-4e24-abc6-a3f09074ee1e)
+![IMG_1681](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/f7ad601b-0744-40bd-b0dd-f40e041ea32c)
+![IMG_1680](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/4c163163-9772-41e5-895b-ccdd7d3d0fdd)
+
+
   Nexys A7 50T:
     ![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/27fc30ae-9109-4832-a9a4-a75c11b14744)
   
@@ -49,15 +58,23 @@ The main part is Nexys A7 programmable FPGA board, which generates signals to th
   
   ![2-channel-relay_schematic](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/cf3f89a9-5809-40a4-8512-3aad8a123a69)
 
+## H
 
-  
 
 ### Components simulation
 
 ## Instructions:
 ### Manual:
 First you have to turn on the Nexys A7 FPGA board. Then when you press the BTNC button, timer starts to count and song starts to play. When you want to pause the song, press again BTNC button. Timer stops too. Then when you want to reset the timer and stop song, press BTND button.
-### Short app video:
+### Short demonstration video:
+
+https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/bf1c21e9-2a33-4d76-a430-1c2afc91b4b1
+
+### Simulations
+The key element was making a song that would click at a specific moment in a specific order. Different clicks (tones) were distributed across various relays to create an easier and better solution for us. There were many attempts to create one signal, which would have all the tones in it, but that took a lot of precious time, so this was the only solution.
+
+![simulation_beta](https://github.com/whereisderci/DE1-VHDL-task2/assets/165037171/495af2de-ab8c-4432-87c5-736caa9f7846)
+
 
 ### Description of working process
 For a long time, our main problem was implementing a basic signal on the Nexys board, which would cause some sort of clicking in the connected relay. The simulation for the signal worked, but the implementation had its bugs to fix. Right after accomplishing this task, the same problem appeared with the melody, where the simulation worked, but the implementation did not.
