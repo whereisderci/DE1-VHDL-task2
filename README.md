@@ -159,6 +159,7 @@ My FSM: PROJEKT_FINAL/my_fsm.vhd
             end case;
 
 
+
 Demux: PROJEKT_FINAL/demux.vhd
 ...
       
@@ -211,7 +212,7 @@ Links for other codes:
     Debounce: PROJEKT_FINAL/debounce.vhd
     Cleaner: PROJEKT_FINAL/cleaner2.vhd
     Signal A1: PROJEKT_FINAL/signal_A1.vhd
-    Counter22: PROJEKT_FINAL/counter22.vhd
+    Counter22: [PROJEKT_FINAL/counter22.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/counter22.vhd)
     
 One of solutions recreating song for relay:
 
