@@ -282,6 +282,10 @@ You can notice that our folder contains many other codes. These were initially m
 
 ![data_digit](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/c098e97b-8b76-4040-8662-25e16618771a)
 
+#### Time periode
+![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/db5bb1fd-05b1-47e1-bace-d6e6e775c564)
+
+
 
 Image represents the whole melody, where numbers represent the quantity of hits by each relay. Different tones are played on different relays. Three relays are used for the melody of the Star Wars Imperial theme song, while the other two relays are for optional drums and tones. In the project, only two are implemented due to the deadline.
 
