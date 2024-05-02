@@ -283,7 +283,8 @@ You can notice that our folder contains many other codes. These were initially m
 ![data_digit](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/c098e97b-8b76-4040-8662-25e16618771a)
 
 #### Time periode
-![image](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/db5bb1fd-05b1-47e1-bace-d6e6e775c564)
+![438209299_1496345327944018_6236865168195039697_n](https://github.com/whereisderci/DE1-VHDL-task2/assets/165771404/bdb1862b-ae22-4cd6-a337-e4f545299ae8)
+
 
 
 
