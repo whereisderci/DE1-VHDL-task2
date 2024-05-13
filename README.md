@@ -183,7 +183,7 @@ You can notice that our folder contains many other codes. These were initially m
             else
                 tick <= tick + 1;
             end if;
-
+.vhd
 #### My FSM: 
 [PROJEKT_FINAL/my_fsm.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/my_fsm.vhd)
 ... 
