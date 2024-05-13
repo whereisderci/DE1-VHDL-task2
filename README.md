@@ -100,7 +100,8 @@ You can notice that our folder contains many other codes. These were initially m
  #### Clock enable : 
  [PROJEKT_FINAL/clk_en.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/clk_en.vhd)
       
-  vhd*
+  vhd.
+  
       entity clk_enable is
         generic (
             N_PERIODS : integer := 3 
@@ -121,8 +122,9 @@ You can notice that our folder contains many other codes. These were initially m
                 end if;                                 
             end if;
     
-    end process p_clk_enable;
-*vhd
+    end process p_clk_enable; 
+vhd.
+
  #### Bin2seg: 
  [PROJEKT_FINAL/bin2seg.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/bin2seg.vhd)
   
