@@ -127,7 +127,8 @@ You can notice that our folder contains many other codes. These were initially m
 
  #### Bin2seg: 
  [PROJEKT_FINAL/bin2seg.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/bin2seg.vhd)
-  
+
+  ```.vhd
       p_7seg_decoder : process (bin, clear) is
     begin
   
@@ -149,10 +150,10 @@ You can notice that our folder contains many other codes. These were initially m
       when x"1" =>
         seg2 <= "1001111";
 ...
-
+```
   #### Simple counter: 
   [PROJEKT_FINAL/simple_counter.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/simple_counter.vhd)
-          
+```.vhd         
           generic (
             FrequencyHz : integer := 100
             );
@@ -183,10 +184,10 @@ You can notice that our folder contains many other codes. These were initially m
             else
                 tick <= tick + 1;
             end if;
-.vhd
+```
 #### My FSM: 
 [PROJEKT_FINAL/my_fsm.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/my_fsm.vhd)
-... 
+```.vhd 
 
       case b is
                 when 0 =>
@@ -200,10 +201,10 @@ You can notice that our folder contains many other codes. These were initially m
             end case;
 
 
-
+```
 #### Demux: 
 [PROJEKT_FINAL/demux.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/demux.vhd)
-...
+```.vhd
       
         begin
             if s = "00" then 
@@ -220,10 +221,10 @@ You can notice that our folder contains many other codes. These were initially m
                 y2 <= '0';
                 y3 <= d;
             end if;
-
+```
 #### Top level: 
 [PROJEKT_FINAL/top_level.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/top_level.vhd)
-
+```.vhd
 ...  adding components, such as simple_counter:
 
         component simple_counter is
@@ -247,7 +248,7 @@ You can notice that our folder contains many other codes. These were initially m
                 seg2 => sig_seg2,
                 dec => sig_dec
                );
-
+```
 ### Links for other codes:
   ##### Beta (underneath top_level, connects song components together): [PROJEKT_FINAL/beta.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/beta.vhd)
   
