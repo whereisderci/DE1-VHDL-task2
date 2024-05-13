@@ -100,7 +100,7 @@ You can notice that our folder contains many other codes. These were initially m
  #### Clock enable : 
  [PROJEKT_FINAL/clk_en.vhd](https://github.com/whereisderci/DE1-VHDL-task2/blob/main/PROJEKT_FINAL/clk_en.vhd)
       
-  ```
+```
   
       entity clk_enable is
         generic (
